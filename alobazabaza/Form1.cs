@@ -116,14 +116,18 @@ namespace alobazabaza
             select("select nume, prenume, media, oras from Admitere where media = (select max(media) from Admitere as x where x.oras = Admitere.oras) order by oras");
         }
 
-        private void button_pb10_1_Click(object sender, EventArgs e)
+        private void button_pb10_Click(object sender, EventArgs e)
         {
-            select("select id, nume, prenume, sex, proba1, proba2, media, datan, rezultat from Admitere where oras = 'Cluj' and rezultat = 'ADMIS' order by media desc, nume, prenume");
-        }
+            q = new SqlCommand("update Admitere set proba1= '" + textBox7.Text + "' where nume= '" + textBox5.Text + "' and prenume= '" + textBox6.Text + "' ", myConnection);
+            q.ExecuteNonQuery();
 
-        private void button_pb10_2_Click(object sender, EventArgs e)
-        {
-            select("select id, nume, prenume, sex, proba1, proba2, media, datan, rezultat from Admitere where oras = 'Cluj' and rezultat = 'RESPINS' order by media desc, nume, prenume");
+            q = new SqlCommand("update Admitere set proba2= '" + textBox10.Text + "' where nume= '" + textBox8.Text + "' and prenume= '" + textBox9.Text + "' ", myConnection);
+            q.ExecuteNonQuery();
+
+            q = new SqlCommand("update Admitere set rezultat = 'ADMIS' where id in (select top 20 id from Admitere where (proba1 >= 5) and (proba2 >= 5) order by media desc)", myConnection);
+            q.ExecuteNonQuery();
+
+            select("select * from Admitere");
         }
 
         private void button_pb11_Click(object sender, EventArgs e)
@@ -169,6 +173,11 @@ namespace alobazabaza
         private void button_pb2_min_Click(object sender, EventArgs e)
         {
             select("select nume, prenume, media, datan, oras from Admitere where id in (select top 5 id from Admitere where rezultat = 'ADMIS' order by media) order by media");
+        }
+
+        private void button_pb3_Click(object sender, EventArgs e)
+        {
+            select("select nume, prenume, oras, datan, media from Admitere where rezultat = 'ADMIS' and dateadd(year, 20, datan) >= getdate() order by datan, nume");
         }
     }
 }

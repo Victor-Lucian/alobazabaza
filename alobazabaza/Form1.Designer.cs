@@ -47,9 +47,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button_pb8 = new System.Windows.Forms.Button();
             this.button_pb7 = new System.Windows.Forms.Button();
-            this.button_pb10_1 = new System.Windows.Forms.Button();
+            this.button_pb10 = new System.Windows.Forms.Button();
             this.button_pb9 = new System.Windows.Forms.Button();
-            this.button_pb10_2 = new System.Windows.Forms.Button();
             this.button_pb11 = new System.Windows.Forms.Button();
             this.button_12_2 = new System.Windows.Forms.Button();
             this.button_12_1 = new System.Windows.Forms.Button();
@@ -57,6 +56,18 @@
             this.button_13_1 = new System.Windows.Forms.Button();
             this.button_pb1_b = new System.Windows.Forms.Button();
             this.button_pb2_min = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.admitereDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +76,7 @@
             this.admitereDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.admitereDataGridView.Location = new System.Drawing.Point(13, 13);
             this.admitereDataGridView.Name = "admitereDataGridView";
-            this.admitereDataGridView.Size = new System.Drawing.Size(685, 360);
+            this.admitereDataGridView.Size = new System.Drawing.Size(685, 389);
             this.admitereDataGridView.TabIndex = 0;
             // 
             // button_pb0
@@ -106,6 +117,7 @@
             this.button_pb3.TabIndex = 4;
             this.button_pb3.Text = "Pb 3";
             this.button_pb3.UseVisualStyleBackColor = true;
+            this.button_pb3.Click += new System.EventHandler(this.button_pb3_Click);
             // 
             // button_pb4_1
             // 
@@ -230,15 +242,15 @@
             this.button_pb7.UseVisualStyleBackColor = true;
             this.button_pb7.Click += new System.EventHandler(this.button_pb7_Click);
             // 
-            // button_pb10_1
+            // button_pb10
             // 
-            this.button_pb10_1.Location = new System.Drawing.Point(797, 227);
-            this.button_pb10_1.Name = "button_pb10_1";
-            this.button_pb10_1.Size = new System.Drawing.Size(75, 23);
-            this.button_pb10_1.TabIndex = 20;
-            this.button_pb10_1.Text = "Pb 10.1";
-            this.button_pb10_1.UseVisualStyleBackColor = true;
-            this.button_pb10_1.Click += new System.EventHandler(this.button_pb10_1_Click);
+            this.button_pb10.Location = new System.Drawing.Point(797, 227);
+            this.button_pb10.Name = "button_pb10";
+            this.button_pb10.Size = new System.Drawing.Size(75, 23);
+            this.button_pb10.TabIndex = 20;
+            this.button_pb10.Text = "Pb 10";
+            this.button_pb10.UseVisualStyleBackColor = true;
+            this.button_pb10.Click += new System.EventHandler(this.button_pb10_Click);
             // 
             // button_pb9
             // 
@@ -250,19 +262,9 @@
             this.button_pb9.UseVisualStyleBackColor = true;
             this.button_pb9.Click += new System.EventHandler(this.button_pb9_Click);
             // 
-            // button_pb10_2
-            // 
-            this.button_pb10_2.Location = new System.Drawing.Point(878, 227);
-            this.button_pb10_2.Name = "button_pb10_2";
-            this.button_pb10_2.Size = new System.Drawing.Size(75, 23);
-            this.button_pb10_2.TabIndex = 21;
-            this.button_pb10_2.Text = "Pb 10.2";
-            this.button_pb10_2.UseVisualStyleBackColor = true;
-            this.button_pb10_2.Click += new System.EventHandler(this.button_pb10_2_Click);
-            // 
             // button_pb11
             // 
-            this.button_pb11.Location = new System.Drawing.Point(716, 256);
+            this.button_pb11.Location = new System.Drawing.Point(878, 227);
             this.button_pb11.Name = "button_pb11";
             this.button_pb11.Size = new System.Drawing.Size(75, 23);
             this.button_pb11.TabIndex = 22;
@@ -272,7 +274,7 @@
             // 
             // button_12_2
             // 
-            this.button_12_2.Location = new System.Drawing.Point(878, 256);
+            this.button_12_2.Location = new System.Drawing.Point(898, 285);
             this.button_12_2.Name = "button_12_2";
             this.button_12_2.Size = new System.Drawing.Size(75, 23);
             this.button_12_2.TabIndex = 24;
@@ -282,7 +284,7 @@
             // 
             // button_12_1
             // 
-            this.button_12_1.Location = new System.Drawing.Point(797, 256);
+            this.button_12_1.Location = new System.Drawing.Point(898, 256);
             this.button_12_1.Name = "button_12_1";
             this.button_12_1.Size = new System.Drawing.Size(75, 23);
             this.button_12_1.TabIndex = 23;
@@ -292,7 +294,7 @@
             // 
             // button_13_2
             // 
-            this.button_13_2.Location = new System.Drawing.Point(797, 285);
+            this.button_13_2.Location = new System.Drawing.Point(898, 343);
             this.button_13_2.Name = "button_13_2";
             this.button_13_2.Size = new System.Drawing.Size(75, 23);
             this.button_13_2.TabIndex = 26;
@@ -302,7 +304,7 @@
             // 
             // button_13_1
             // 
-            this.button_13_1.Location = new System.Drawing.Point(716, 285);
+            this.button_13_1.Location = new System.Drawing.Point(898, 314);
             this.button_13_1.Name = "button_13_1";
             this.button_13_1.Size = new System.Drawing.Size(75, 23);
             this.button_13_1.TabIndex = 25;
@@ -330,11 +332,119 @@
             this.button_pb2_min.UseVisualStyleBackColor = true;
             this.button_pb2_min.Click += new System.EventHandler(this.button_pb2_min_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(721, 259);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Nume1:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(785, 256);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 30;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(785, 282);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 32;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(721, 285);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Prenume1:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(785, 308);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(721, 311);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Nota1:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(785, 334);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(722, 337);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Nume2:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(785, 360);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(722, 363);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Prenume2:";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(785, 386);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 40;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(722, 389);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "Nota2:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 387);
+            this.ClientSize = new System.Drawing.Size(985, 415);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button_pb2_min);
             this.Controls.Add(this.button_pb1_b);
             this.Controls.Add(this.button_13_2);
@@ -342,8 +452,7 @@
             this.Controls.Add(this.button_12_2);
             this.Controls.Add(this.button_12_1);
             this.Controls.Add(this.button_pb11);
-            this.Controls.Add(this.button_pb10_2);
-            this.Controls.Add(this.button_pb10_1);
+            this.Controls.Add(this.button_pb10);
             this.Controls.Add(this.button_pb9);
             this.Controls.Add(this.button_pb8);
             this.Controls.Add(this.button_pb7);
@@ -394,9 +503,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button_pb8;
         private System.Windows.Forms.Button button_pb7;
-        private System.Windows.Forms.Button button_pb10_1;
+        private System.Windows.Forms.Button button_pb10;
         private System.Windows.Forms.Button button_pb9;
-        private System.Windows.Forms.Button button_pb10_2;
         private System.Windows.Forms.Button button_pb11;
         private System.Windows.Forms.Button button_12_2;
         private System.Windows.Forms.Button button_12_1;
@@ -404,6 +512,18 @@
         private System.Windows.Forms.Button button_13_1;
         private System.Windows.Forms.Button button_pb1_b;
         private System.Windows.Forms.Button button_pb2_min;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label10;
     }
 }
 
