@@ -150,5 +150,25 @@ namespace alobazabaza
         {
             select("select nume, prenume, media from Admitere where media>=8.50 and media<=9.74 order by nume, prenume");
         }
+
+        private void button_pb1_f_Click(object sender, EventArgs e)
+        {
+            select("select nume, prenume, rezultat, media from Admitere where sex = 'F' order by media desc");
+        }
+
+        private void button_pb1_b_Click(object sender, EventArgs e)
+        {
+            select("select nume, prenume, rezultat, media from Admitere where sex = 'F' order by media desc");
+        }
+
+        private void button_pb2_max_Click(object sender, EventArgs e)
+        {
+            select("select nume, prenume, media, datan, oras from Admitere where id in (select top 5 id from Admitere where rezultat = 'ADMIS' order by media desc) order by media desc");
+        }
+
+        private void button_pb2_min_Click(object sender, EventArgs e)
+        {
+            select("select nume, prenume, media, datan, oras from Admitere where id in (select top 5 id from Admitere where rezultat = 'ADMIS' order by media) order by media");
+        }
     }
 }

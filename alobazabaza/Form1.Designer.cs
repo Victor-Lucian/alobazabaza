@@ -30,8 +30,8 @@
         {
             this.admitereDataGridView = new System.Windows.Forms.DataGridView();
             this.button_pb0 = new System.Windows.Forms.Button();
-            this.button_pb1 = new System.Windows.Forms.Button();
-            this.button_pb2 = new System.Windows.Forms.Button();
+            this.button_pb1_f = new System.Windows.Forms.Button();
+            this.button_pb2_max = new System.Windows.Forms.Button();
             this.button_pb3 = new System.Windows.Forms.Button();
             this.button_pb4_1 = new System.Windows.Forms.Button();
             this.button_pb4_2 = new System.Windows.Forms.Button();
@@ -55,6 +55,8 @@
             this.button_12_1 = new System.Windows.Forms.Button();
             this.button_13_2 = new System.Windows.Forms.Button();
             this.button_13_1 = new System.Windows.Forms.Button();
+            this.button_pb1_b = new System.Windows.Forms.Button();
+            this.button_pb2_min = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.admitereDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,27 +78,29 @@
             this.button_pb0.UseVisualStyleBackColor = true;
             this.button_pb0.Click += new System.EventHandler(this.button_pb0_Click);
             // 
-            // button_pb1
+            // button_pb1_f
             // 
-            this.button_pb1.Location = new System.Drawing.Point(797, 13);
-            this.button_pb1.Name = "button_pb1";
-            this.button_pb1.Size = new System.Drawing.Size(75, 23);
-            this.button_pb1.TabIndex = 2;
-            this.button_pb1.Text = "Pb 1";
-            this.button_pb1.UseVisualStyleBackColor = true;
+            this.button_pb1_f.Location = new System.Drawing.Point(797, 13);
+            this.button_pb1_f.Name = "button_pb1_f";
+            this.button_pb1_f.Size = new System.Drawing.Size(75, 23);
+            this.button_pb1_f.TabIndex = 2;
+            this.button_pb1_f.Text = "Pb 1_f";
+            this.button_pb1_f.UseVisualStyleBackColor = true;
+            this.button_pb1_f.Click += new System.EventHandler(this.button_pb1_f_Click);
             // 
-            // button_pb2
+            // button_pb2_max
             // 
-            this.button_pb2.Location = new System.Drawing.Point(716, 42);
-            this.button_pb2.Name = "button_pb2";
-            this.button_pb2.Size = new System.Drawing.Size(75, 23);
-            this.button_pb2.TabIndex = 3;
-            this.button_pb2.Text = "Pb 2";
-            this.button_pb2.UseVisualStyleBackColor = true;
+            this.button_pb2_max.Location = new System.Drawing.Point(719, 42);
+            this.button_pb2_max.Name = "button_pb2_max";
+            this.button_pb2_max.Size = new System.Drawing.Size(75, 23);
+            this.button_pb2_max.TabIndex = 3;
+            this.button_pb2_max.Text = "Pb 2_max";
+            this.button_pb2_max.UseVisualStyleBackColor = true;
+            this.button_pb2_max.Click += new System.EventHandler(this.button_pb2_max_Click);
             // 
             // button_pb3
             // 
-            this.button_pb3.Location = new System.Drawing.Point(797, 42);
+            this.button_pb3.Location = new System.Drawing.Point(878, 42);
             this.button_pb3.Name = "button_pb3";
             this.button_pb3.Size = new System.Drawing.Size(75, 23);
             this.button_pb3.TabIndex = 4;
@@ -105,7 +109,7 @@
             // 
             // button_pb4_1
             // 
-            this.button_pb4_1.Location = new System.Drawing.Point(716, 71);
+            this.button_pb4_1.Location = new System.Drawing.Point(719, 71);
             this.button_pb4_1.Name = "button_pb4_1";
             this.button_pb4_1.Size = new System.Drawing.Size(75, 23);
             this.button_pb4_1.TabIndex = 5;
@@ -125,7 +129,7 @@
             // 
             // button_pb5
             // 
-            this.button_pb5.Location = new System.Drawing.Point(716, 100);
+            this.button_pb5.Location = new System.Drawing.Point(878, 71);
             this.button_pb5.Name = "button_pb5";
             this.button_pb5.Size = new System.Drawing.Size(75, 23);
             this.button_pb5.TabIndex = 7;
@@ -135,7 +139,7 @@
             // 
             // button_pb6
             // 
-            this.button_pb6.Location = new System.Drawing.Point(797, 100);
+            this.button_pb6.Location = new System.Drawing.Point(716, 198);
             this.button_pb6.Name = "button_pb6";
             this.button_pb6.Size = new System.Drawing.Size(75, 23);
             this.button_pb6.TabIndex = 8;
@@ -146,7 +150,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(716, 141);
+            this.label1.Location = new System.Drawing.Point(716, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 9;
@@ -154,14 +158,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(780, 138);
+            this.textBox1.Location = new System.Drawing.Point(780, 94);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 10;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(780, 164);
+            this.textBox2.Location = new System.Drawing.Point(780, 120);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 12;
@@ -169,7 +173,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(716, 167);
+            this.label2.Location = new System.Drawing.Point(716, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 11;
@@ -177,7 +181,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(780, 190);
+            this.textBox3.Location = new System.Drawing.Point(780, 146);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 14;
@@ -185,7 +189,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(716, 193);
+            this.label3.Location = new System.Drawing.Point(716, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 13;
@@ -193,7 +197,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(780, 216);
+            this.textBox4.Location = new System.Drawing.Point(780, 172);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 16;
@@ -201,7 +205,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(716, 219);
+            this.label4.Location = new System.Drawing.Point(716, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 15;
@@ -209,7 +213,7 @@
             // 
             // button_pb8
             // 
-            this.button_pb8.Location = new System.Drawing.Point(797, 242);
+            this.button_pb8.Location = new System.Drawing.Point(878, 198);
             this.button_pb8.Name = "button_pb8";
             this.button_pb8.Size = new System.Drawing.Size(75, 23);
             this.button_pb8.TabIndex = 18;
@@ -218,7 +222,7 @@
             // 
             // button_pb7
             // 
-            this.button_pb7.Location = new System.Drawing.Point(716, 242);
+            this.button_pb7.Location = new System.Drawing.Point(797, 198);
             this.button_pb7.Name = "button_pb7";
             this.button_pb7.Size = new System.Drawing.Size(75, 23);
             this.button_pb7.TabIndex = 17;
@@ -228,7 +232,7 @@
             // 
             // button_pb10_1
             // 
-            this.button_pb10_1.Location = new System.Drawing.Point(797, 271);
+            this.button_pb10_1.Location = new System.Drawing.Point(797, 227);
             this.button_pb10_1.Name = "button_pb10_1";
             this.button_pb10_1.Size = new System.Drawing.Size(75, 23);
             this.button_pb10_1.TabIndex = 20;
@@ -238,7 +242,7 @@
             // 
             // button_pb9
             // 
-            this.button_pb9.Location = new System.Drawing.Point(716, 271);
+            this.button_pb9.Location = new System.Drawing.Point(716, 227);
             this.button_pb9.Name = "button_pb9";
             this.button_pb9.Size = new System.Drawing.Size(75, 23);
             this.button_pb9.TabIndex = 19;
@@ -248,7 +252,7 @@
             // 
             // button_pb10_2
             // 
-            this.button_pb10_2.Location = new System.Drawing.Point(716, 300);
+            this.button_pb10_2.Location = new System.Drawing.Point(878, 227);
             this.button_pb10_2.Name = "button_pb10_2";
             this.button_pb10_2.Size = new System.Drawing.Size(75, 23);
             this.button_pb10_2.TabIndex = 21;
@@ -258,7 +262,7 @@
             // 
             // button_pb11
             // 
-            this.button_pb11.Location = new System.Drawing.Point(797, 300);
+            this.button_pb11.Location = new System.Drawing.Point(716, 256);
             this.button_pb11.Name = "button_pb11";
             this.button_pb11.Size = new System.Drawing.Size(75, 23);
             this.button_pb11.TabIndex = 22;
@@ -268,7 +272,7 @@
             // 
             // button_12_2
             // 
-            this.button_12_2.Location = new System.Drawing.Point(797, 329);
+            this.button_12_2.Location = new System.Drawing.Point(878, 256);
             this.button_12_2.Name = "button_12_2";
             this.button_12_2.Size = new System.Drawing.Size(75, 23);
             this.button_12_2.TabIndex = 24;
@@ -278,7 +282,7 @@
             // 
             // button_12_1
             // 
-            this.button_12_1.Location = new System.Drawing.Point(716, 329);
+            this.button_12_1.Location = new System.Drawing.Point(797, 256);
             this.button_12_1.Name = "button_12_1";
             this.button_12_1.Size = new System.Drawing.Size(75, 23);
             this.button_12_1.TabIndex = 23;
@@ -288,7 +292,7 @@
             // 
             // button_13_2
             // 
-            this.button_13_2.Location = new System.Drawing.Point(797, 358);
+            this.button_13_2.Location = new System.Drawing.Point(797, 285);
             this.button_13_2.Name = "button_13_2";
             this.button_13_2.Size = new System.Drawing.Size(75, 23);
             this.button_13_2.TabIndex = 26;
@@ -298,7 +302,7 @@
             // 
             // button_13_1
             // 
-            this.button_13_1.Location = new System.Drawing.Point(716, 358);
+            this.button_13_1.Location = new System.Drawing.Point(716, 285);
             this.button_13_1.Name = "button_13_1";
             this.button_13_1.Size = new System.Drawing.Size(75, 23);
             this.button_13_1.TabIndex = 25;
@@ -306,11 +310,33 @@
             this.button_13_1.UseVisualStyleBackColor = true;
             this.button_13_1.Click += new System.EventHandler(this.button_13_1_Click);
             // 
+            // button_pb1_b
+            // 
+            this.button_pb1_b.Location = new System.Drawing.Point(878, 13);
+            this.button_pb1_b.Name = "button_pb1_b";
+            this.button_pb1_b.Size = new System.Drawing.Size(75, 23);
+            this.button_pb1_b.TabIndex = 27;
+            this.button_pb1_b.Text = "Pb 1_b";
+            this.button_pb1_b.UseVisualStyleBackColor = true;
+            this.button_pb1_b.Click += new System.EventHandler(this.button_pb1_b_Click);
+            // 
+            // button_pb2_min
+            // 
+            this.button_pb2_min.Location = new System.Drawing.Point(797, 42);
+            this.button_pb2_min.Name = "button_pb2_min";
+            this.button_pb2_min.Size = new System.Drawing.Size(75, 23);
+            this.button_pb2_min.TabIndex = 28;
+            this.button_pb2_min.Text = "Pb 2_min";
+            this.button_pb2_min.UseVisualStyleBackColor = true;
+            this.button_pb2_min.Click += new System.EventHandler(this.button_pb2_min_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 387);
+            this.ClientSize = new System.Drawing.Size(985, 387);
+            this.Controls.Add(this.button_pb2_min);
+            this.Controls.Add(this.button_pb1_b);
             this.Controls.Add(this.button_13_2);
             this.Controls.Add(this.button_13_1);
             this.Controls.Add(this.button_12_2);
@@ -334,8 +360,8 @@
             this.Controls.Add(this.button_pb4_2);
             this.Controls.Add(this.button_pb4_1);
             this.Controls.Add(this.button_pb3);
-            this.Controls.Add(this.button_pb2);
-            this.Controls.Add(this.button_pb1);
+            this.Controls.Add(this.button_pb2_max);
+            this.Controls.Add(this.button_pb1_f);
             this.Controls.Add(this.button_pb0);
             this.Controls.Add(this.admitereDataGridView);
             this.Name = "Form1";
@@ -351,8 +377,8 @@
 
         private System.Windows.Forms.DataGridView admitereDataGridView;
         private System.Windows.Forms.Button button_pb0;
-        private System.Windows.Forms.Button button_pb1;
-        private System.Windows.Forms.Button button_pb2;
+        private System.Windows.Forms.Button button_pb1_f;
+        private System.Windows.Forms.Button button_pb2_max;
         private System.Windows.Forms.Button button_pb3;
         private System.Windows.Forms.Button button_pb4_1;
         private System.Windows.Forms.Button button_pb4_2;
@@ -376,6 +402,8 @@
         private System.Windows.Forms.Button button_12_1;
         private System.Windows.Forms.Button button_13_2;
         private System.Windows.Forms.Button button_13_1;
+        private System.Windows.Forms.Button button_pb1_b;
+        private System.Windows.Forms.Button button_pb2_min;
     }
 }
 
