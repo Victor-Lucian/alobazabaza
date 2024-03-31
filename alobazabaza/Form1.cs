@@ -106,14 +106,14 @@ namespace alobazabaza
             textBox4.Text = (nr10 * 100) / nrtot + "%";
         }
 
-        private void button_pb7_Click(object sender, EventArgs e)
+        private void button_pb7_a_Click(object sender, EventArgs e)
         {
             select("select nume, prenume, media, rezultat, oras from Admitere order by oras, nume, prenume");
         }
 
-        private void button_pb9_Click(object sender, EventArgs e)
+        private void button_pb9_1_Click(object sender, EventArgs e)
         {
-            select("select nume, prenume, media, oras from Admitere where media = (select max(media) from Admitere as x where x.oras = Admitere.oras) order by oras");
+            select("select nume, prenume, sex, proba1, proba2, media, datan, rezultat from Admitere where rezultat = 'ADMIS' and oras = 'CLUJ' order by media");
         }
 
         private void button_pb10_Click(object sender, EventArgs e)
@@ -147,12 +147,12 @@ namespace alobazabaza
 
         private void button_13_1_Click(object sender, EventArgs e)
         {
-            select("select nume, prenume, media from Admitere where media>=9.75 and media<=10 order by nume, prenume");
+            select("select nume, prenume, media from Admitere where (media>9.74) order by nume, prenume");
         }
 
         private void button_13_2_Click(object sender, EventArgs e)
         {
-            select("select nume, prenume, media from Admitere where media>=8.50 and media<=9.74 order by nume, prenume");
+            select("select nume, prenume, media from Admitere where (media>8.49) and (media<9.75) order by nume, prenume");
         }
 
         private void button_pb1_f_Click(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace alobazabaza
 
         private void button_pb1_b_Click(object sender, EventArgs e)
         {
-            select("select nume, prenume, rezultat, media from Admitere where sex = 'F' order by media desc");
+            select("select nume, prenume, rezultat, media from Admitere where sex = 'M' order by media desc");
         }
 
         private void button_pb2_max_Click(object sender, EventArgs e)
@@ -178,6 +178,55 @@ namespace alobazabaza
         private void button_pb3_Click(object sender, EventArgs e)
         {
             select("select nume, prenume, oras, datan, media from Admitere where rezultat = 'ADMIS' and dateadd(year, 20, datan) >= getdate() order by datan, nume");
+        }
+
+        private void button_pb7_b_Click(object sender, EventArgs e)
+        {
+            select("select rank() OVER(order by Oras,Nume,Prenume) as NR,NUME,PRENUME,MEDIA,REZULTAT from Admitere where Oras='" + textBoxOras.Text + "' order by Nume,Prenume");
+        }
+
+        private void button_pb8_Click(object sender, EventArgs e)
+        {
+            select("select Nume, Prenume, Media, Oras from Admitere where media = (select max(media) from Admitere as Adm where Admitere.Oras = Adm.Oras) order by Oras");
+        }
+
+        private void button_pb9_2_Click(object sender, EventArgs e)
+        {
+            select("select nume, prenume, sex, proba1, proba2, media, datan, rezultat from Admitere where rezultat = 'RESPINS' and oras = 'CLUJ' order by media");
+        }
+
+        private void button_pb14_1_Click(object sender, EventArgs e)
+        {
+            select("select nume, prenume, datan, oras from admitere where rezultat = 'RESPINS' and (" + DateTime.Now.Year + " - Year(datan) >= 20) order by nume, prenume");
+        }
+
+        private void button_pb14_2_Click(object sender, EventArgs e)
+        {
+            select("select nume, prenume, datan, oras from admitere where NOT(rezultat = 'RESPINS' and (" + DateTime.Now.Year + " - Year(datan) >= 20)) order by nume, prenume");
+        }
+
+        private void button_pb15_Click(object sender, EventArgs e)
+        {
+            q = new SqlCommand("select count(*) from admitere where Oras = '" + textBoxOras.Text + "'", myConnection);
+            int cnt = Convert.ToInt32(q.ExecuteScalar());
+            q = new SqlCommand("select count(*) from admitere where Oras = '" + textBoxOras.Text + "' and Rezultat = 'ADMIS'", myConnection);
+            int nr_admisi = Convert.ToInt32(q.ExecuteScalar());
+            int procentaj = nr_admisi * 100 / cnt;
+            textBoxProcentaj.Text = "Procentaj admisi: " + procentaj + "%, NumarTotalCandidati";
+        }
+
+        private void button_pb16_Click(object sender, EventArgs e)
+        {
+            q = new SqlCommand("select avg(media) from admitere where rezultat = 'ADMIS'");
+            double media_tot = Convert.ToDouble(q.ExecuteScalar());
+
+            q = new SqlCommand("select avg(proba1) from admitere where rezultat = 'ADMIS'");
+            double media_1 = Convert.ToDouble(q.ExecuteScalar());
+
+            q = new SqlCommand("select avg(proba2) from admitere where rezultat = 'ADMIS'");
+            double media_2 = Convert.ToDouble(q.ExecuteScalar());
+
+            /// trebuie sa faci afisarea
         }
     }
 }
