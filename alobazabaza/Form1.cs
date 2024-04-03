@@ -227,7 +227,26 @@ namespace alobazabaza
             q = new SqlCommand("select avg(proba2) from admitere where rezultat = 'ADMIS'", myConnection);
             double media_2 = Convert.ToDouble(q.ExecuteScalar());
 
-            textBoxProcentaj.Text = "Procentaj medii: " + media_tot + "%, Procentaj proba1: " + media_1 + "%, Procentaj proba2: " + media_2 + "%";
+            textBoxProcentaj.Text = "Procentaj medii: " + Math.Round(media_tot, 2) + "%, Procentaj proba1: " + Math.Round(media_1, 2) + "%, Procentaj proba2: " + Math.Round(media_2, 2) + "%";
+        }
+
+        private void button_pb17_Click(object sender, EventArgs e)
+        {
+            q = new SqlCommand("select min(media) from Admitere where rezultat = 'ADMIS'", myConnection);
+            double medie_admitere = Convert.ToDouble(q.ExecuteScalar());
+
+            select("select nume, prenume, media, oras from Admitere where rezultat = 'RESPINS' and media > " + medie_admitere + " ");
+        }
+
+        private void button_pb18_Click(object sender, EventArgs e)
+        {
+            q = new SqlCommand("select avg(media) from Admitere where rezultat = 'ADMIS'", myConnection);
+            double medie_admisi = Convert.ToDouble(q.ExecuteScalar());
+
+            q = new SqlCommand("select avg(media) from Admitere where rezultat = 'RESPINS'", myConnection);
+            double medie_respinsi = Convert.ToDouble(q.ExecuteScalar());
+
+            textBoxProcentaj.Text = "Medie admisi: " + Math.Round(medie_admisi, 2) + ", Medie respinsi: " + Math.Round(medie_respinsi, 2) + "";
         }
     }
 }

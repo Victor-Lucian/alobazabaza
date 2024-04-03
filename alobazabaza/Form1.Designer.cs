@@ -76,6 +76,8 @@
             this.button_pb15 = new System.Windows.Forms.Button();
             this.textBoxProcentaj = new System.Windows.Forms.TextBox();
             this.button_pb16 = new System.Windows.Forms.Button();
+            this.button_pb17 = new System.Windows.Forms.Button();
+            this.button_pb18 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.admitereDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -511,11 +513,33 @@
             this.button_pb16.UseVisualStyleBackColor = true;
             this.button_pb16.Click += new System.EventHandler(this.button_pb16_Click);
             // 
+            // button_pb17
+            // 
+            this.button_pb17.Location = new System.Drawing.Point(797, 543);
+            this.button_pb17.Name = "button_pb17";
+            this.button_pb17.Size = new System.Drawing.Size(75, 23);
+            this.button_pb17.TabIndex = 49;
+            this.button_pb17.Text = "Pb 17";
+            this.button_pb17.UseVisualStyleBackColor = true;
+            this.button_pb17.Click += new System.EventHandler(this.button_pb17_Click);
+            // 
+            // button_pb18
+            // 
+            this.button_pb18.Location = new System.Drawing.Point(878, 543);
+            this.button_pb18.Name = "button_pb18";
+            this.button_pb18.Size = new System.Drawing.Size(75, 23);
+            this.button_pb18.TabIndex = 50;
+            this.button_pb18.Text = "Pb 18";
+            this.button_pb18.UseVisualStyleBackColor = true;
+            this.button_pb18.Click += new System.EventHandler(this.button_pb18_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 574);
+            this.Controls.Add(this.button_pb18);
+            this.Controls.Add(this.button_pb17);
             this.Controls.Add(this.button_pb16);
             this.Controls.Add(this.textBoxProcentaj);
             this.Controls.Add(this.button_pb15);
@@ -623,6 +647,8 @@
         private System.Windows.Forms.Button button_pb15;
         private System.Windows.Forms.TextBox textBoxProcentaj;
         private System.Windows.Forms.Button button_pb16;
+        private System.Windows.Forms.Button button_pb17;
+        private System.Windows.Forms.Button button_pb18;
     }
 }
 
