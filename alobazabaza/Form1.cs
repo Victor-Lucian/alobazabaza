@@ -233,7 +233,7 @@ namespace alobazabaza
         private void button_pb17_Click(object sender, EventArgs e)
         {
             q = new SqlCommand("select min(media) from Admitere where rezultat = 'ADMIS'", myConnection);
-            double medie_admitere = Convert.ToDouble(q.ExecuteScalar());
+            float medie_admitere = float.Parse(q.ExecuteScalar().ToString());
 
             select("select nume, prenume, media, oras from Admitere where rezultat = 'RESPINS' and media > " + medie_admitere + " ");
         }
@@ -247,6 +247,19 @@ namespace alobazabaza
             double medie_respinsi = Convert.ToDouble(q.ExecuteScalar());
 
             textBoxProcentaj.Text = "Medie admisi: " + Math.Round(medie_admisi, 2) + ", Medie respinsi: " + Math.Round(medie_respinsi, 2) + "";
+        }
+
+        private void button_pb19_1_Click(object sender, EventArgs e)
+        {
+            select("select oras, count(*) as NRCAND from Admitere group by oras order by oras");
+        }
+
+        private void button_pb19_2_Click(object sender, EventArgs e)
+        {
+            q = new SqlCommand("select top 1 count(*) as NRCAND from Admitere group by oras order by NRCAND desc", myConnection);
+            int nrmax = Convert.ToInt32(q.ExecuteScalar());
+
+            select("select oras, count(*) as NRCAND from Admitere where NRCAND = " + nrmax);
         }
     }
 }
