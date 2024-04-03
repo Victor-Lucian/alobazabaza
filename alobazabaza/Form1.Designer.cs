@@ -89,7 +89,7 @@
             // 
             // button_pb0
             // 
-            this.button_pb0.Location = new System.Drawing.Point(716, 13);
+            this.button_pb0.Location = new System.Drawing.Point(720, 13);
             this.button_pb0.Name = "button_pb0";
             this.button_pb0.Size = new System.Drawing.Size(75, 23);
             this.button_pb0.TabIndex = 1;

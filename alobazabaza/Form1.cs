@@ -61,6 +61,7 @@ namespace alobazabaza
 
             q = new SqlCommand("update Admitere set rezultat = 'ADMIS' where id in ( select top 20 id from Admitere where (proba1>=5) and (proba2>=5) order by media desc)", myConnection);
             q.ExecuteNonQuery();
+
             select("select * from Admitere");
         }
 
@@ -217,16 +218,16 @@ namespace alobazabaza
 
         private void button_pb16_Click(object sender, EventArgs e)
         {
-            q = new SqlCommand("select avg(media) from admitere where rezultat = 'ADMIS'");
+            q = new SqlCommand("select avg(media) from admitere where rezultat = 'ADMIS'", myConnection);
             double media_tot = Convert.ToDouble(q.ExecuteScalar());
 
-            q = new SqlCommand("select avg(proba1) from admitere where rezultat = 'ADMIS'");
+            q = new SqlCommand("select avg(proba1) from admitere where rezultat = 'ADMIS'", myConnection);
             double media_1 = Convert.ToDouble(q.ExecuteScalar());
 
-            q = new SqlCommand("select avg(proba2) from admitere where rezultat = 'ADMIS'");
+            q = new SqlCommand("select avg(proba2) from admitere where rezultat = 'ADMIS'", myConnection);
             double media_2 = Convert.ToDouble(q.ExecuteScalar());
 
-            /// trebuie sa faci afisarea
+            textBoxProcentaj.Text = "Procentaj medii: " + media_tot + "%, Procentaj proba1: " + media_1 + "%, Procentaj proba2: " + media_2 + "%";
         }
     }
 }
