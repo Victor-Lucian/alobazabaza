@@ -251,15 +251,28 @@ namespace alobazabaza
 
         private void button_pb19_1_Click(object sender, EventArgs e)
         {
-            select("select oras, count(*) as NRCAND from Admitere group by oras order by oras");
+            select("select oras, COUNT(*) as NRCAND from Admitere group by oras order by oras");
         }
 
         private void button_pb19_2_Click(object sender, EventArgs e)
         {
-            q = new SqlCommand("select top 1 count(*) as NRCAND from Admitere group by oras order by NRCAND desc", myConnection);
-            int nrmax = Convert.ToInt32(q.ExecuteScalar());
+            /// Varianta 1
+            // select("select oras, count() as nr_candidati from Admitere group by oras having count()=(select top 1 count() from Admitere group by oras order by count() desc)");
 
-            select("select oras, count(*) as NRCAND from Admitere where NRCAND = " + nrmax);
+            /// Varianta 2
+            q = new SqlCommand("select top 1 count(*) as nrcand from admitere group by oras order by nrcand desc", myConnection);
+            int nrmax = Convert.ToInt32(q.ExecuteScalar());
+            select("select oras, count(*) as nrcand from admitere group by oras having nrcand = " + nrmax);
+        }
+
+        private void button_pb20_1_Click(object sender, EventArgs e)
+        {
+            select("SELECT Nume, Prenume, Oras, Media, Datan FROM(SELECT *, RANK() OVER(ORDER BY MEDIA DESC, Nume) as NumarOrdine FROM Admitere WHERE Rezultat = 'ADMIS') as RankedAdmitere WHERE NumarOrdine % 2 != 0 ORDER BY NumarOrdine");
+        }
+
+        private void button_pb20_2_Click(object sender, EventArgs e)
+        {
+            select("SELECT Nume, Prenume, Oras, Media, Datan FROM(SELECT *, RANK() OVER(ORDER BY MEDIA DESC, Nume) as NumarOrdine FROM Admitere WHERE Rezultat = 'ADMIS') as RankedAdmitere WHERE NumarOrdine % 2 = 0 ORDER BY NumarOrdine");
         }
     }
 }

@@ -80,6 +80,8 @@
             this.button_pb18 = new System.Windows.Forms.Button();
             this.button_pb19_1 = new System.Windows.Forms.Button();
             this.button_pb19_2 = new System.Windows.Forms.Button();
+            this.button_pb20_1 = new System.Windows.Forms.Button();
+            this.button_pb20_2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.admitereDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +90,7 @@
             this.admitereDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.admitereDataGridView.Location = new System.Drawing.Point(13, 13);
             this.admitereDataGridView.Name = "admitereDataGridView";
-            this.admitereDataGridView.Size = new System.Drawing.Size(685, 549);
+            this.admitereDataGridView.Size = new System.Drawing.Size(685, 610);
             this.admitereDataGridView.TabIndex = 0;
             // 
             // button_pb0
@@ -555,11 +557,33 @@
             this.button_pb19_2.UseVisualStyleBackColor = true;
             this.button_pb19_2.Click += new System.EventHandler(this.button_pb19_2_Click);
             // 
+            // button_pb20_1
+            // 
+            this.button_pb20_1.Location = new System.Drawing.Point(878, 572);
+            this.button_pb20_1.Name = "button_pb20_1";
+            this.button_pb20_1.Size = new System.Drawing.Size(75, 23);
+            this.button_pb20_1.TabIndex = 53;
+            this.button_pb20_1.Text = "Pb 20.1";
+            this.button_pb20_1.UseVisualStyleBackColor = true;
+            this.button_pb20_1.Click += new System.EventHandler(this.button_pb20_1_Click);
+            // 
+            // button_pb20_2
+            // 
+            this.button_pb20_2.Location = new System.Drawing.Point(716, 600);
+            this.button_pb20_2.Name = "button_pb20_2";
+            this.button_pb20_2.Size = new System.Drawing.Size(75, 23);
+            this.button_pb20_2.TabIndex = 54;
+            this.button_pb20_2.Text = "Pb 20.2";
+            this.button_pb20_2.UseVisualStyleBackColor = true;
+            this.button_pb20_2.Click += new System.EventHandler(this.button_pb20_2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 619);
+            this.ClientSize = new System.Drawing.Size(985, 635);
+            this.Controls.Add(this.button_pb20_2);
+            this.Controls.Add(this.button_pb20_1);
             this.Controls.Add(this.button_pb19_2);
             this.Controls.Add(this.button_pb19_1);
             this.Controls.Add(this.button_pb18);
@@ -675,6 +699,8 @@
         private System.Windows.Forms.Button button_pb18;
         private System.Windows.Forms.Button button_pb19_1;
         private System.Windows.Forms.Button button_pb19_2;
+        private System.Windows.Forms.Button button_pb20_1;
+        private System.Windows.Forms.Button button_pb20_2;
     }
 }
 
