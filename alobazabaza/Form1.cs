@@ -20,7 +20,7 @@ namespace alobazabaza
 
         public void openConnection()
         {
-            string myConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Admitere.mdf;Integrated Security=True;Connect Timeout=30";
+            string myConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Admitere.mdf;Integrated Security=True";
             myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
         }
